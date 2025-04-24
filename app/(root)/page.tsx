@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import Image from 'next/image';
 import { dummyInterviews } from '@/constants';
+import InterviewCard from '@/components/InterviewCard';
 
 const HomePage = () => {  
   return (
@@ -24,14 +25,20 @@ const HomePage = () => {
       <section className='flex flex-col gap-6 mt-8'>
         <h2>Your Interviews</h2>
         <div className='interview section' >
-          {dummyInterviews}
+          {dummyInterviews.map((interview) => (
+            <InterviewCard {...interview} key = {interview.id} />
+
+          ))}
         </div>
       </section>
 
       <section className='flex flex-col gap-6 mt-8'>
         <h2>Take Interview</h2>
         <div className='interview section' >
-          <p>No Interview available!</p>
+          {dummyInterviews.map((interview) => (
+            <InterviewCard {...interview} key = {interview.id} />
+
+          ))}
         </div>
       </section>
     
