@@ -6,9 +6,11 @@ import { redirect } from "next/navigation";
 import {
   getFeedbackByInterviewId,
   getInterviewById,
-} from "@/lib/actions/general.action";
+} from "@/lib/actions/generate.action"
 import { Button } from "@/components/ui/button";
 import { getCurrentUser } from "@/lib/actions/auth.action";
+import BackToDashboardButton from "@/components/BackToDashboardButton";
+import RetakeInterviewButton from "@/components/RetakeInterviewButton";
 
 const Feedback = async ({ params }: RouteParams) => {
   const { id } = await params;
@@ -92,25 +94,9 @@ const Feedback = async ({ params }: RouteParams) => {
         </ul>
       </div>
 
-      <div className="buttons">
-        <Button className="btn-secondary flex-1">
-          <Link href="/" className="flex w-full justify-center">
-            <p className="text-sm font-semibold text-primary-200 text-center">
-              Back to dashboard
-            </p>
-          </Link>
-        </Button>
-
-        <Button className="btn-primary flex-1">
-          <Link
-            href={`/interview/${id}`}
-            className="flex w-full justify-center"
-          >
-            <p className="text-sm font-semibold text-black text-center">
-              Retake Interview
-            </p>
-          </Link>
-        </Button>
+      <div className="button" >
+      <BackToDashboardButton />
+      <RetakeInterviewButton interviewId={id} />
       </div>
     </section>
   );
