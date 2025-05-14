@@ -1,12 +1,12 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import React, { ReactNode } from 'react'
 import { isAuthenticated } from '@/lib/actions/auth.action'
 import { redirect } from 'next/navigation';
-import Link from 'next/link';
-import Image from 'next/image';
-import HomeLoginbtn from '@/components/HomeLoginbtn';
+import SignOutButton from '@/components/SignOutButton';
 const Rootlayout = async ({children} : {children: ReactNode}) => {
-  const isUserAuthenticated = await isAuthenticated();
-      if (isUserAuthenticated) redirect('/dashboard');
+ const isUserAuthenticated = await isAuthenticated();
+  if (!isUserAuthenticated) redirect('/');
   return (
     <div className='root-layout'>
       <nav className='flex items-center justify-between   shadow'>
@@ -14,9 +14,7 @@ const Rootlayout = async ({children} : {children: ReactNode}) => {
         <Image src="/logo.svg" alt="Logo" width={38} height={32}/>
         <h2 className='text-primary-100'>IntervueAI</h2>
         </Link>
-        
-       <Link href="/sign-in">
-        <HomeLoginbtn /></Link>
+        <SignOutButton />
       </nav>
       {children}
     </div>

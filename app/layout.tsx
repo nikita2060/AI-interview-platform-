@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Mona_Sans} from "next/font/google";
+import { Mona_Sans } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 
-
-const mona_Sans = Mona_Sans({
+const monaSans = Mona_Sans({
   variable: "--font-mona-sans",
   subsets: ["latin"],
+  //display: "swap", // ⬅️  improves font performance
 });
 
 
+
 export const metadata: Metadata = {
-  title: "Interview Prep App",
-  description: "AI web app for interview preparation",
+  title: "IntervueAI - Precision in Recruitment",
+  description: "IntervueAI is an AI-driven interview platform with real-time voice integration and automated feedback, helping users prepare faster and smarter.",
 };
 
 export default function RootLayout({
@@ -23,10 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${mona_Sans.className}  antialiased pattern`}
+        className={`${monaSans.className} antialiased pattern`}
       >
         {children}
-        <Toaster/>
+        <Toaster />
       </body>
     </html>
   );
