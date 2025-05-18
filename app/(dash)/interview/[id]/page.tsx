@@ -1,6 +1,6 @@
 
 import GetInterview from "@/components/GetInterview"
-import DisplayTechicons from "@/components/DisplayTechicons";
+// import DisplayTechicons from "@/components/DisplayTechicons";
 import { getCurrentUser } from "@/lib/actions/auth.action";
 import { getInterviewById } from "@/lib/actions/generate.action";
 import { getRandomInterviewCover } from "@/lib/utils";
@@ -20,7 +20,7 @@ const page = async ({ params }: RouteParams)  => {
             <Image src={getRandomInterviewCover()} alt="cover-image" width={40} height={40} className="rounded-full hidden sm:block   object-cover  size-[40px] "/>
          <h3 className="capitalize">{interview.role}</h3>
         </div><div className="hidden sm:block ">
-        <DisplayTechicons techStack={interview.techstack} />
+        {/* <DisplayTechicons techStack={interview.techstack} /> */}
         </div>
         
        </div>   
