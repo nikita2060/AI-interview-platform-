@@ -132,8 +132,8 @@ const GetInterview = ({userName, userId, type, interviewId, questions}: GetInter
   </div>
 )}
         <div className='card-interviewer'>
-            <div className='avatar size-[130px]' ><Image src="/Chloe RT600.webp" alt="connor" width={123} height={65} className='object-cover rounded-full'/>{isSpeaking && <span className='animate-speak'/>}</div>
-            <h3>Chloe</h3>
+            <div className='avatar size-[130px]' ><Image src="/profile1.webp" alt="Shilpa" width={123} height={65} className='object-cover rounded-full'/>{isSpeaking && <span className='animate-speak'/>}</div>
+            <h3>Shilpa</h3>
             <h4>Virtual Interviewer</h4>
         </div>
         <div className='card-border'>
