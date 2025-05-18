@@ -2,7 +2,7 @@ import { getRandomInterviewCover } from "@/lib/utils";
 import dayjs from "dayjs";
 import Image from "next/image";
 
-import DisplayTechicons from "@/components/DisplayTechicons";
+// import DisplayTechicons from "@/components/DisplayTechicons";
 import { getFeedbackByInterviewId } from "@/lib/actions/generate.action";
 import CheckFeedbackInterviewButton from "./CheckFeedbackInterviewButton";
 
@@ -41,7 +41,7 @@ const InterviewCard =  async ({ id, userId, role, type, techstack, createdAt}: I
       <p className="line-clamp-2 mt-[-10%]">{feedback?.finalAssessment || "You haven't taken interview yet. Take it now to improve your skills." }</p>
     
     <div className="flex flex-row justify-between">
-      <DisplayTechicons techStack={techstack} />
+      {/* <DisplayTechicons techStack={techstack} /> */}
       <CheckFeedbackInterviewButton hasFeedback={!!feedback} interviewId={id} />
 
       </div>
