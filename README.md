@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Prepwise is an AI-powered job interview preparation platform built with:
 
-## Getting Started
+Next.js for frontend
 
-First, run the development server:
+Vapi.ai for voice-based AI interaction
 
-```bash
+Tailwind CSS for UI styling
+
+Firebase for backend authentication and storage
+
+The platform enables users to simulate real-time technical interviews using voice commands, receive intelligent feedback, and prepare more effectively for job interviews.
+
+📦 Features
+🎤 Voice-based Q&A with AI interviewer (Vapi)
+
+🧠 AI-generated feedback on answers
+
+👤 User authentication with Firebase
+
+💾 Real-time data sync and session management
+
+🧩 Modular UI with customizable components
+
+🛠️ Installation & Setup
+1. Clone the repository
+
+git clone https://github.com/your-username/ai_mock_interviews.git
+cd ai_mock_interviews
+
+2. Install dependencies
+
+npm install
+
+3. Set up environment variables
+Create a .env.local file in the root directory and add:
+
+NEXT_PUBLIC_FIREBASE_API_KEY=your_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+NEXT_PUBLIC_VAPI_API_KEY=your_vapi_api_key
+
+4. Run the development server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Visit http://localhost:3000 to access the app locally.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📁 Folder Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+.
+├── app/                    # Next.js App router
+├── components/             # Reusable React components
+├── constants/              # Static data/constants
+├── firebase/               # Firebase configuration
+├── lib/                    # Utilities and hooks
+├── public/                 # Public assets
+├── types/                  # TypeScript type definitions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🌐 Deployment
+Deployed via Vercel. To deploy your own:
 
-## Learn More
+Push the code to GitHub.
 
-To learn more about Next.js, take a look at the following resources:
+Import the repo on Vercel.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Add your environment variables in Vercel settings.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Deploy 🚀
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
