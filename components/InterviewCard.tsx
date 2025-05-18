@@ -2,7 +2,7 @@ import { getRandomInterviewCover } from "@/lib/utils";
 import dayjs from "dayjs";
 import Image from "next/image";
 
-import DisplayTechicons from "./DisplayTechicons";
+import DisplayTechicons from "@/components/DisplayTechicons";
 import { getFeedbackByInterviewId } from "@/lib/actions/generate.action";
 import CheckFeedbackInterviewButton from "./CheckFeedbackInterviewButton";
 
