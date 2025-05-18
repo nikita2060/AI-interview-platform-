@@ -27,8 +27,7 @@ const page = async ({ params }: RouteParams)  => {
        
     <div className="bg-dark-200 px-5 rounded-lg   sm:h-auto hidden sm:block  capitalize"><p className="mt-2">{interview.type}</p></div>
     
-    <div className="sm:hidden ">
-        <DisplayTechicons techStack={interview.techstack} /></div>
+    
         
     </div>
     
