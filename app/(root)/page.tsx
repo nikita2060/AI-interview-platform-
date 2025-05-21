@@ -72,7 +72,7 @@ export default function LandingPage() {
         <Link href="/sign-up">
           <GetStartedbtn />
         </Link>
-        <div className="absolute inset-0 z-0 rounded-xl pointer-events-none glow-border" />
+        {/* Removed the glow-border div */}
       </div>
 
       {/* <div className="relative z-20">
