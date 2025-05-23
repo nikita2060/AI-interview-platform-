@@ -9,9 +9,9 @@ import { InfiniteMovingCards } from "@/components/ui/InfiniteCards";
 const Testimonials = () => {
     return (
         <section id="testimonials" className="py-3">
-          <h1 className="heading">
+          <h1 className="heading text-white">
             Kind words from
-            <span className=" from-[#DDDFFF] text-transparent bg-clip-text bg-gradient-to-r to-[#8564be]"> satisfied Users</span>
+            <span className="text-white"> satisfied Users</span>
           </h1>
     
           <div className="flex flex-col items-center max-lg:mt-10">

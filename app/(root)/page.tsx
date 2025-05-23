@@ -47,9 +47,9 @@ export default function LandingPage() {
       {/* Existing content */}
       <div className="flex justify-center content-center mt-6 items-center">
         <div className="gap-x-1">
-          <div className="sm:text-5xl text-2xl text-[#CCCEEF] text-center font-light">
+          <div className="sm:text-5xl text-2xl text-white text-center font-light">
             Where everyone
-            <div className="sm:text-7xl text-4xl mt-1.5 from-[#DDDFFF] text-transparent bg-clip-text bg-gradient-to-r to-[#8564be] font-bold text-center leading-[1.2] tracking-tight">
+            <div className="sm:text-7xl text-4xl mt-1.5 text-white font-bold text-center leading-[1.2] tracking-tight">
               suffers together
             </div>
             <div className="gap-2 pl-5 pr-5">
@@ -81,13 +81,13 @@ export default function LandingPage() {
 
       <div className="flex flex-col items-center">
         <section className="max-w-4xl px-4 text-center mt-[-50]">
-          <div className="sm:text-4xl text-2xl mt-7 from-[#466CCF] text-transparent bg-clip-text bg-gradient-to-r to-[#FF3BD4] font-bold text-center leading-[1.2] tracking-tight">
+          <div className="sm:text-4xl text-2xl mt-7 text-white font-bold text-center leading-[1.2] tracking-tight">
             WHY CHOOSE US
           </div>
-          <div className="text-[#CCCEEF] text-2xl mt-3 sm:text-6xl font-bold tracking-tight leading-tight">
+          <div className="text-white text-2xl mt-3 sm:text-6xl font-bold tracking-tight leading-tight">
             Unleash Your Potential with AI
           </div>
-          <div className="text-[#7376AA] text-[20px] mt-3 leading-relaxed">
+          <div className="text-white text-[20px] mt-3 leading-relaxed">
             Take your interview preparation to the next level with features
             designed for success.
           </div>
