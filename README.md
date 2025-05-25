@@ -1,4 +1,4 @@
-Prepwise is an AI-powered job interview preparation platform built with:
+InterviewPrep is an AI-powered job interview preparation platform built with:
 
 Next.js for frontend
 
