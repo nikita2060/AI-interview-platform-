@@ -6,8 +6,6 @@ import SplineBackground from "@/components/SplineBackground";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 import GetStartedbtn from "@/components/GetStartedbtn";
-// import HomePlay from "@/components/HomePlay";
-import Testimonials from "@/components/Testimonials";
 
 export default function LandingPage() {
   const [mounted, setMounted] = useState(false);
@@ -21,14 +19,14 @@ export default function LandingPage() {
   return (
     <>
       {/* Hero section with Spline */}
-      <section className="relative min-h-[600px] rounded-3xl overflow-hidden mb-12 flex">
+      <section className="relative min-h-[80px] rounded-3xl overflow-hidden mb-12 flex flex-col md:flex-row">
         {/* Left content */}
-        <div className="relative z-20 flex flex-col justify-center p-16 max-sm:p-8 w-full md:w-1/2">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 max-w-xl text-on-spline tracking-tight leading-tight">
-            Get Interview-Ready with AI-Powered Practice & Feedback
+        <div className="relative z-20 flex flex-col justify-center p-16 max-sm:p-8 w-full md:w-1/2 bg-gradient-to-r from-black/50 to-transparent">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-6 max-w-xl tracking-tight leading-tight">
+            Master Your Interview Skills with AI-Driven Practice
           </h1>
-          <p className="text-xl text-white/90 mb-8 max-w-lg text-on-spline leading-relaxed">
-            Practice on real interview questions & get instant feedback
+          <p className="text-lg text-white/90 mb-8 max-w-lg leading-relaxed">
+            Get personalized interview simulations, real-time feedback, and expert guidance to land your dream job.
           </p>
           <Link href="/sign-up">
             <GetStartedbtn />
@@ -36,72 +34,53 @@ export default function LandingPage() {
         </div>
 
         {/* Right side with Spline 3D robot */}
-        <div className=" w-full md:relative md:w-1/2 h-full md:rounded-3xl overflow-hidden md:relative">
+        <div className="absolute md:relative inset-0 md:inset-auto md:w-1/2 h-full min-h-[80px] overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent md:hidden" />
           <SplineBackground
             sceneUrl="https://prod.spline.design/2goG9T1bI53vr8nb/scene.splinecode"
-            className="h-full w-full"
+            className="h-full w-full object-cover"
           />
         </div>
       </section>
 
-      {/* Existing content */}
-      <div className="flex justify-center content-center mt-6 items-center">
-        <div className="gap-x-1">
-          <div className="sm:text-5xl text-2xl text-white text-center font-light">
-            Where everyone
-            <div className="sm:text-7xl text-4xl mt-1.5 text-white font-bold text-center leading-[1.2] tracking-tight">
-              suffers together
-            </div>
-            <div className="gap-2 pl-5 pr-5">
-              <p className="sm:text-2xl text-[16px] text-center mt-3 justify-center items-center leading-relaxed">
-                We know how brutal interviews can be. They don't have to be.
-              </p>
-              <p className="sm:text-2xl text-[16px] text-center justify-center items-center leading-relaxed">
-                Generate personalized mock interviews, watch how others handled
-                theirs,
-              </p>
-              <p className="sm:text-2xl text-[16px] text-center justify-center items-center leading-relaxed">
-                and get feedback that actually helps.
-              </p>
-            </div>
-          </div>
+      
+      {/* <div className="flex justify-center content-center my-16 items-center">
+        <div className="max-w-3xl text-center px-4">
+          <h2 className="text-2xl sm:text-3xl text-white font-medium mb-6">
+            Your Path to Interview Excellence
+          </h2>
+          <p className="text-base sm:text-lg text-white/90 leading-relaxed mb-4">
+            In today's competitive job market, standing out is crucial. Our advanced AI platform provides tailored interview scenarios that match your industry and experience level.
+          </p>
+          <p className="text-base sm:text-lg text-white/90 leading-relaxed">
+            Practice with confidence using our cutting-edge technology that simulates real interview environments and provides detailed performance analytics.
+          </p>
         </div>
       </div>
 
-      <div className="flex justify-center items-center text-center">
+      <div className="flex justify-center items-center mb-16">
         <Link href="/sign-up">
           <GetStartedbtn />
         </Link>
-        {/* Removed the glow-border div */}
-      </div>
-
-      {/* <div className="relative z-20">
-        <HomePlay />
       </div> */}
 
-      <div className="flex flex-col items-center">
-        <section className="max-w-4xl px-4 text-center mt-[-50]">
-          <div className="sm:text-4xl text-2xl mt-7 text-white font-bold text-center leading-[1.2] tracking-tight">
-            WHY CHOOSE US
-          </div>
-          <div className="text-white text-2xl mt-3 sm:text-6xl font-bold tracking-tight leading-tight">
-            Unleash Your Potential with AI
-          </div>
-          <div className="text-white text-[20px] mt-3 leading-relaxed">
-            Take your interview preparation to the next level with features
-            designed for success.
-          </div>
+      {/* Features Section */}
+      <div className="flex flex-col items-center mb-16">
+        <section className="max-w-4xl px-4 text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl text-white font-bold mb-4">
+            The InterviewPrep Advantage
+          </h2>
+          <h3 className="text-xl sm:text-2xl text-white font-medium mb-4">
+            Advanced Tools for Interview Success
+          </h3>
+          <p className="text-base sm:text-lg text-white/90">
+            Experience the future of interview preparation with our comprehensive suite of AI-powered tools.
+          </p>
         </section>
 
-        <section className="relative w-screen justify-center items-center flex overflow-hidden">
-          <div className="mt-10">
-            <Features />
-          </div>
+        <section className="w-full max-w-7xl px-4 mx-auto">
+          <Features />
         </section>
-      </div>
-
-      <div className="relative z-10">
-        <Testimonials />
       </div>
 
       <div className="relative z-10">

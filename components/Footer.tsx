@@ -21,7 +21,7 @@ const Footer = () => {
         <Link href="https://github.com/nikita2060/AI-interview-platform-" >
         < Github />
         </Link> */}
-        <p className="sm:text-3xl mt-4 text-lg text-purple-200 font-medium">
+        <p className="sm:text-3xl mt-4 text-lg text-white font-medium">
           Your Gateway to Smarter Interview Preparation!
         </p>
       </div>
