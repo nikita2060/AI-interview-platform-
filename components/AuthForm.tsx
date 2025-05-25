@@ -77,10 +77,13 @@ const AuthForm = ({type}: {type: FormType}) => {
         toast.success("Sign in successfully.");
         router.push('/dashboard')
       }
-    } catch(error){
-      console.log(error);
-      toast.error(`There is an error: ${error}`);
-      // Set loading to false on error
+    } catch(error: any) {
+      console.error('Authentication error details:', {
+        code: error.code,
+        message: error.message,
+        fullError: error
+      });
+      toast.error(`Sign up failed: ${error.message}`);
       setIsLoading(false);
     }
   }
