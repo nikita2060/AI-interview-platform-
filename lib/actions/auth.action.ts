@@ -32,7 +32,7 @@ export async function signUp(params: SignUpParams){
 
 export async function signIn(params: SignInParams){
     const { email, idToken} = params;
-    try {
+    // try {
         const userRecord = await auth.getUserByEmail(email);
         if(!userRecord){
             return{
@@ -48,9 +48,9 @@ export async function signIn(params: SignInParams){
             }
         }
         await setSessionCookie(idToken);
-    } catch (e) {
-        console.log(e);
-    }
+    // } catch (e) {
+    //     console.log(e);
+    // }
 }
 
 export async function setSessionCookie(idToken: string){
