@@ -67,15 +67,19 @@ const AuthForm = ({type}: {type: FormType}) => {
       } else {
         const {email,password} = values;
         const userCredential = await signInWithEmailAndPassword(auth,email,password);
+       console.log(JSON.stringify(userCredential))
         const idToken = await userCredential.user.getIdToken();
+        console.log(idToken);
         if(!idToken) {
           toast.error('Sign in failed')
           setIsLoading(false);
           return;
         }
-        await signIn({ email, idToken})
+        const result = await signIn({ email, idToken})
+        console.log(result);
         toast.success("Sign in successfully.");
         router.push('/dashboard')
+        console.log('checkpoint1');
       }
     } catch(error: any) {
       console.error('Authentication error details:', {

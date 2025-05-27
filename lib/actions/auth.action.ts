@@ -40,6 +40,13 @@ export async function signIn(params: SignInParams){
                 message: 'User does not exist. Create an account instead.'
             }
         }
+        else{
+            await setSessionCookie(idToken);
+            return {
+                success: true,
+                message: 'User signed in successfully',
+            }
+        }
         await setSessionCookie(idToken);
     } catch (e) {
         console.log(e);
