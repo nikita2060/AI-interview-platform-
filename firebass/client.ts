@@ -17,35 +17,35 @@ const firebaseConfig = {
 const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
 export const auth = getAuth(app);
 export const db = getFirestore(app);
-export const provider = new GoogleAuthProvider();
+// export const provider = new GoogleAuthProvider();
 
-export const signInWithGoogle = async () => {
-  try {
-    const result = await signInWithPopup(auth, provider);
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const token = credential?.accessToken;
-    const user = result.user;
+// export const signInWithGoogle = async () => {
+//   try {
+//     const result = await signInWithPopup(auth, provider);
+//     const credential = GoogleAuthProvider.credentialFromResult(result);
+//     const token = credential?.accessToken;
+//     const user = result.user;
 
-    const idToken = await user.getIdToken();
+//     const idToken = await user.getIdToken();
 
-    // Send to server to store in DB and set session
-    await fetch("/api/google-auth", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        uid: user.uid,
-        name: user.displayName,
-        email: user.email,
-        idToken,
-      }),
-    });
+//     // Send to server to store in DB and set session
+//     await fetch("/api/google-auth", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify({
+//         uid: user.uid,
+//         name: user.displayName,
+//         email: user.email,
+//         idToken,
+//       }),
+//     });
 
-    return { user, token, idToken }; // ✅ returning all
-  } catch (error) {
-    console.error("Error signing in with Google: ", error);
-    throw error;
-  }
-};
+//     return { user, token, idToken }; // ✅ returning all
+//   } catch (error) {
+//     console.error("Error signing in with Google: ", error);
+//     throw error;
+//   }
+// };
 
