@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Loading from './Loading';
 
-// Define the interview form state
+
 interface InterviewForm {
   type: string;
   role: string;
@@ -46,9 +46,9 @@ const Agent = ({ userName, userId, type }: AgentProps) => {
         const newMessage = { role: message.role, content: message.transcript };
         setMessages((prev) => [...prev, newMessage]);
         
-        // Process the message to extract interview details
+        
         if (message.role === 'user') {
-          // Extract role, level, etc. from user messages
+          
           processUserMessage(message.transcript);
         }
       }
@@ -74,9 +74,9 @@ const Agent = ({ userName, userId, type }: AgentProps) => {
     };
   }, []);
 
-  // Process user messages to extract interview details
+ 
   const processUserMessage = (content: string) => {
-    // This is a simplified example - you would need more sophisticated parsing
+   
     if (content.includes('role') || content.includes('position')) {
       const roleMatch = content.match(/(?:role|position)(?:\s+is)?\s+(\w+)/i);
       if (roleMatch && roleMatch[1]) {
@@ -91,10 +91,10 @@ const Agent = ({ userName, userId, type }: AgentProps) => {
       }
     }
     
-    // Add more parsing logic as needed
+
   };
 
-  // Save the interview using the existing endpoint
+  
   const saveInterview = async () => {
     try {
       const response = await fetch('/api/google-auth/vapi/generate', {
